@@ -1346,7 +1346,8 @@ loop:
       case FLOAT:
       case INT:
         return new DeclaredType(jtype.tsym.name.toString());
-        // case ERROR:
+        case ERROR:
+          return new DeclaredType(jtype.toString());
         // case EXECUTABLE:
         // case NONE:
         // case NULL:
